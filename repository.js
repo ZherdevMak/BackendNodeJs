@@ -5,7 +5,7 @@ fs.readFile("users.json", function(err, buf) {
 });
 const addUser = async (name) => {
     let users = await getUsers()
-    users.push({'name': name})
+    users.push({name} )
     return  writeJSONtoFile("users.json",users)
 }
 
