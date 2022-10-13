@@ -1,5 +1,6 @@
 
 let http = require ('http')
+let {userController} = require('./userController')
 
 let server = http.createServer( function (req,res)  {
     //SET CORSES
@@ -12,6 +13,7 @@ let server = http.createServer( function (req,res)  {
         res.end()
         return
     }
+
     console.log('some request')
     switch (req.url) {
         case '/':
@@ -20,10 +22,9 @@ let server = http.createServer( function (req,res)  {
         case'/tasks':
             res.write('tasks')
             break
-        case'/users':
-            res.write(`[{"id": 1, "name":"Pasha"}, {"id": 2, "name":"Masha"}]`)
+        case'/users': userController(req,res);
             break
     }
-    res.end()
+
 })
 server.listen(7500)
