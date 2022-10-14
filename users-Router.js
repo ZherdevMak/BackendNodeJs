@@ -2,6 +2,8 @@ const express = require('express')
 const {getUsers, addUser} = require("./repository");
 const router = express.Router()
 
+
+
 // middleware that is specific to this router
 router.get('/', async (req, res) => {
     let users = await getUsers()
@@ -17,7 +19,8 @@ router.get('/:id', async (req, res) => {
     }
 })
 router.post('/', async (req, res) => {
-    await addUser("Tanya")
+    let name = req.body.name
+    await addUser(name)
     res.send({succes: true})
 })
 
