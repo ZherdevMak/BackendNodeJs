@@ -9,7 +9,7 @@ app.use(bodyPsrser.urlencoded({extended: false}))
 app.use(bodyPsrser.json())
 app.use(cors())
 // app.use('/users', users)
-app.get('/tasks', async (req, res) => {
+app.get('/', async (req, res) => {
     res.send('tasks')
 })
 
