@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
 app.use((req, res) => {
     res.send(404)
 })
-app.listen(process.env.PORT, '0.0.0.0', 0,() => {
+app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${port}`)
 })
 
