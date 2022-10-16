@@ -9,11 +9,7 @@ main().then(() => {
 async function main() {
     const db = 'mongodb://_:<API-KEY>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:<SERVICE_NAME>:api-key'
     const dbCheck = mongoose
-        .connect(db, {
-            useNewUrlParser: true,
-            useCreateIndex: true,
-            useUnifiedTopology: true
-        })
+        .connect(db)
         .then(() => console.log(dbCheck, '---db check----'))
             .catch(err => console.log(err));
     // mongoose.connect(process.env.MONGODB_URI ||
