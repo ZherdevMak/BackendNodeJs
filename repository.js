@@ -7,7 +7,8 @@ main().then(() => {
 })
 
 async function main() {
-    mongoose.connect(process.env.MONGOURI,{
+    const db = "mongodb+srv://Max:maxmax@cluster0.ygygtyl.mongodb.net/?retryWrites=true&w=majority"
+    mongoose.connect(db,{
         useUnifiedTopology: true,
         useNewUrlParser: true,
         useCreateIndex:true,
