@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT | 7500
+const port = process.env.PORT
 const users = require('./users-Router')
 const cors = require('cors')
 const bodyPsrser = require('body-parser')
