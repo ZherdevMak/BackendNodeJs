@@ -11,26 +11,6 @@ async function main() {
     mongoose.connect(db)
         .then(() => console.log('MongoDB Connected...'))
         .catch((err) => console.log(err))
-
-    // const db = 'mongodb://<USERNAME>:<PASSWORD>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-1-fgwss:mongodb-atlas:local-userpass'
-    // const dbCheck = mongoose
-    //     .connect(db)
-    //     .then(() => console.log(dbCheck, '---db check----'))
-    //         .catch(err => console.log(err));
-    // await mongoose.connect(uri)
-    // mongoose.connect(process.env.MONGODB_URI ||
-    //     'mongodb://localhost:27017/kb')
-    // await mongoose.connect('mongodb://localhost:27017/users');
-    // try {
-    //    await mongoose.corealm-cli pull --remote=application-1-fgwssnnect( 'mongodb://_:<API-KEY>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:<SERVICE_NAME>:api-key', {useNewUrlParser: true, useUnifiedTopology: true}, () =>
-    //         console.log("connected"));
-    // }catch (error) {
-    //     console.log("could not connect");
-    // }
-    // await mongoose.connect('mongodb://_:<API-KEY>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:<SERVICE_NAME>:api-key');
-    // await mongoose.connect('mongodb://<USERNAME>:<PASSWORD>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:mongodb-atlas:local-userpass');
-
-    // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
 }
 
 fs.readFile("users.json", function(err, buf) {
