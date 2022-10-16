@@ -1,7 +1,7 @@
 {
-    "app_id": "application-0-zeapk",
+    "app_id": "application-1-fgwss",
     "config_version": 20210101,
-    "name": "Application-0",
+    "name": "Application-1",
     "location": "US-VA",
     "provider_region": "aws-us-east-1",
     "deployment_model": "LOCAL"
