@@ -8,7 +8,7 @@ main().then(() => {
 
 async function main() {
     // await mongoose.connect('mongodb://localhost:27017/users');
-    await mongoose.connect('mongodb://_:<API-KEY>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:<SERVICE_NAME>:api-key');
+    await mongoose.connect('mongodb://_:<API-KEY>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:<SERVICE_NAME>:api-key', {useNewUrlParser:true});
     // await mongoose.connect('mongodb://<USERNAME>:<PASSWORD>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-0-zeapk:mongodb-atlas:local-userpass');
 
     // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
