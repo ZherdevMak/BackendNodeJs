@@ -7,12 +7,21 @@ main().then(() => {
 })
 
 async function main() {
+    mongoose.connect(process.env.MONGOURI,{
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+        useCreateIndex:true,
+        useFindAndModify:false,
+    })
+        .then(() => console.log('MongoDB Connected...'))
+        .catch((err) => console.log(err))
+
     // const db = 'mongodb://<USERNAME>:<PASSWORD>@us-east-1.aws.realm.mongodb.com:27020/?authMechanism=PLAIN&authSource=%24external&ssl=true&appName=application-1-fgwss:mongodb-atlas:local-userpass'
     // const dbCheck = mongoose
     //     .connect(db)
     //     .then(() => console.log(dbCheck, '---db check----'))
     //         .catch(err => console.log(err));
-    await mongoose.connect(uri)
+    // await mongoose.connect(uri)
     // mongoose.connect(process.env.MONGODB_URI ||
     //     'mongodb://localhost:27017/kb')
     // await mongoose.connect('mongodb://localhost:27017/users');
