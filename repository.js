@@ -8,12 +8,7 @@ main().then(() => {
 
 async function main() {
     const db = "mongodb+srv://Max:maxmax@cluster0.ygygtyl.mongodb.net/?retryWrites=true&w=majority"
-    mongoose.connect(db,{
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
-        useCreateIndex:true,
-        useFindAndModify:false,
-    })
+    mongoose.connect(db)
         .then(() => console.log('MongoDB Connected...'))
         .catch((err) => console.log(err))
 
